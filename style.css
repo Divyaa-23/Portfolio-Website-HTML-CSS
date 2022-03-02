@@ -44,9 +44,10 @@ nav > ul > li:hover {
 .firstPg {
   width: 100%;
   height: 100vh;
+  overflow: hidden;
   position: relative;
-background-color: rgba(235, 206, 208,0.9);
- /*  background-image: url(/images/background.jpg);
+  background-color: rgba(235, 206, 208, 0.9);
+  /*  background-image: url(/images/background.jpg);
 
   background-attachment: fixed;
   background-position: center;
@@ -139,7 +140,7 @@ background-color: rgba(235, 206, 208,0.9);
   animation: Gradient 15s ease infinite;
   position: relative;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
   padding: 0;
   margin: 0px;
@@ -313,7 +314,7 @@ button:hover {
   height: 12rem;
   margin-bottom: 10px;
   border-radius: 50%;
-  margin-left: 33%;
+  margin-left: 32%;
   margin-top: 8%;
   box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.2);
 }
@@ -349,11 +350,11 @@ button:hover {
   width: 75%;
   background-color: #577590;
 }
-.mongodb{
+.mongodb {
   width: 75%;
   background-color: #43aa8b;
 }
-.java{
+.java {
   width: 65%;
   background-color: #5570eb;
 }
@@ -369,8 +370,6 @@ button:hover {
   display: grid;
 
   line-height: 50px;
-
-  border-radius: 15px;
 
   margin-left: auto;
   margin-right: auto;
@@ -465,7 +464,7 @@ footer {
   justify-content: center;
   background-color: rgba(165, 42, 42, 0.1);
   display: grid;
-  grid-template-columns: repeat(4, 250px);
+  grid-template-columns: repeat(2, 70px);
   padding: 10px;
 }
 .footerIcons > a {
@@ -473,4 +472,332 @@ footer {
 }
 .footerIcons > a:hover {
   transform: scale(1.2);
+}
+
+/* Media Queries */
+@media (max-width: 1440px) {
+  nav > ul {
+    position: fixed;
+    top: 0;
+    margin-left: 60%;
+  }
+}
+@media (max-width: 1024px) {
+  nav > ul {
+    position: fixed;
+    top: 0;
+    margin-left: 40%;
+  }
+
+  ul > li {
+    display: inline-block;
+    padding: 25px;
+  }
+  nav > ul > li:hover {
+    height: 10px;
+    padding: 10px;
+    margin-top: -10px;
+
+    text-decoration: none;
+
+    transform: skew(-15deg) scale(1.5);
+  }
+}
+@media (max-width: 768px) {
+  .firstPg > h1 {
+    font-family: "Fredoka One", cursive;
+    font-size: 4rem;
+    text-align: center;
+    top: 45%;
+  }
+  .firstPg > h2 {
+    font-size: 3em;
+    top: 55%;
+  }
+  .firstPg {
+    overflow: hidden;
+  }
+  nav > ul {
+    position: fixed;
+    top: 0;
+    margin-left: 15%;
+  }
+
+  ul > li {
+    display: inline-block;
+    padding: 25px;
+    font-size: x-large;
+  }
+  nav > ul > li:hover {
+    height: 10px;
+    padding: 10px;
+    margin-top: -10px;
+
+    text-decoration: none;
+
+    transform: skew(-15deg) scale(1.5);
+  }
+  .fab,
+  .fas {
+    font-size: 3rem;
+  }
+  .fa-java {
+    font-size: 3.5rem;
+  }
+  .text-container > h2 {
+    padding: 0.2rem;
+    font-size: 55px;
+  }
+
+  .text-container > p {
+    width: 35rem;
+    font-size: 35px;
+    line-height: 3rem;
+    padding: 0.5rem;
+  }
+  .knowMore {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    margin-top: 20%;
+    padding: 10px;
+    font-size: x-large;
+    width: 10rem;
+  }
+  .myPic {
+    display: none;
+  }
+  .aboutMe {
+    width: 80%;
+    height: 25vh;
+
+    /* line-height: 18px;
+    line-break: -10px; */
+  }
+
+  .thirdPg {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .skillset {
+    width: 80%;
+    height: 63vh;
+    font-size: small;
+    padding: 10px;
+    margin-top: 5px;
+  }
+
+  .formBorder {
+    margin-top: 30%;
+    width: 80%;
+
+    align-self: center;
+    justify-self: center;
+    /* margin: 15px auto; */
+  }
+  form {
+    display: grid;
+
+    line-height: 40px;
+
+    border-radius: 15px;
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    padding: 25px;
+    left: 0;
+    right: 0;
+  }
+  .title {
+    display: block;
+    font-family: sans-serif;
+    margin: 10px auto 5px;
+    width: 200px;
+  }
+  .pageTitle {
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 3rem;
+  }
+  input[type="text"] {
+    border: none;
+    padding: 5px;
+    height: 2.5rem;
+    width: 50%;
+  }
+  .message {
+    width: 50%;
+    height: 5rem;
+    border: none;
+    padding: 8px;
+  }
+  .secondaryTitle {
+    line-height: 2rem;
+    font-size: x-large;
+  }
+  button {
+    font-size: large;
+  }
+  footer {
+    top: 98%;
+
+    display: grid;
+  }
+  .footerIcons {
+    justify-content: center;
+    background-color: rgba(165, 42, 42, 0.1);
+    display: grid;
+    grid-template-columns: repeat(2, 50px);
+    padding: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .firstPg > h1 {
+    font-family: "Fredoka One", cursive;
+    font-size: 2rem;
+    text-align: center;
+    top: 35%;
+  }
+  .firstPg > h2 {
+    font-size: 1.5em;
+    top: 45%;
+  }
+  .firstPg {
+    overflow: hidden;
+  }
+  nav > ul {
+    position: fixed;
+    top: 0;
+  }
+
+  ul > li {
+    display: inline-block;
+    padding: 5px;
+    font-size: large;
+  }
+  nav > ul > li:hover {
+    height: 10px;
+    padding: 5px;
+    margin-top: -10px;
+
+    text-decoration: none;
+
+    transform: skew(-15deg) scale(1.5);
+  }
+  .fab,
+  .fas {
+    font-size: 2rem;
+  }
+  .fa-java {
+    font-size: 2.5rem;
+  }
+  .text-container > h2 {
+    padding: 0.2rem;
+
+    font-size: large;
+  }
+
+  .text-container > p {
+    height: 10rem;
+    width: 13rem;
+    font-size: 20px;
+    line-height: 2rem;
+    padding: 0.1rem;
+
+    top: -5rem;
+  }
+  .knowMore {
+    display: none;
+  }
+  .myPic {
+    display: none;
+  }
+  .aboutMe {
+    width: 80%;
+    height: 36vh;
+  }
+
+  .thirdPg {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .skillset {
+    width: 80%;
+    height: 63vh;
+    font-size: small;
+    padding: 10px;
+    margin-top: 5px;
+  }
+
+  .formBorder {
+    border: 2px solid black;
+    width: 80%;
+
+    align-self: center;
+    justify-self: center;
+    margin: 135px auto;
+  }
+  form {
+    display: grid;
+
+    line-height: 20px;
+
+    border-radius: 15px;
+
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    padding-top: 5px;
+    padding: 5px;
+    left: 0;
+    right: 0;
+  }
+  .title {
+    display: block;
+    font-family: sans-serif;
+    margin: 10px auto 5px;
+    width: 100px;
+  }
+  .pageTitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 2rem;
+  }
+  .message {
+    background-color: #bde0fe;
+
+    height: 5rem;
+    border: none;
+    padding: 8px;
+    margin-top: 1rem;
+  }
+  .secondaryTitle {
+    line-height: 1.5rem;
+    font-size: large;
+  }
+
+  button {
+    font-size: small;
+  }
+  footer {
+    top: 98%;
+
+    display: grid;
+  }
+  .footerIcons {
+    justify-content: center;
+    background-color: rgba(165, 42, 42, 0.1);
+    display: grid;
+    grid-template-columns: repeat(2, 50px);
+    padding: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .aboutMe {
+    font-size: small;
+  }
 }
